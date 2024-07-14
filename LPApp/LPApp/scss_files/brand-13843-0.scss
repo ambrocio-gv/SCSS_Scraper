@@ -1,0 +1,502 @@
+
+@import "helpers/config";
+@import "../../../../../Styles/helpers/grid";
+@import "https://fonts.googleapis.com/css2?family=Arsenal:wght@700&display=swap";
+
+$featuredHeaderTextColor: #1a1a1a;
+$featuredHeaderBackgroundColor: #bfd4d2;
+
+$featuredBaseColor: #2d2119;
+$featuredWrapperColor: #f0d093;
+$featuredTitleBackgroundColor: #462a1e;
+$featuredHeaderText: #dbb86e;
+
+$featuredPanelColor: #f0d093;
+$featuredButtonColor: #462a1e;
+
+$featuredFormPanel: #f9f1e5;
+$featuredTextColor: #26150e;
+$featuredFormTextColor: #1d0b03;
+$featuredFormButtonTextColor: #fefefe;
+
+$featuredSiteBackground: $templateImageURL + "tk-XXLJumboSelectionBox-2560x1438.jpg";
+$featuredPrize: $templateImageURL + "tk-XXLJumboSelectionBox-768x896.jpg";
+
+$ignoreImageFormat: ".gif";
+
+
+.template-header {
+  background-color: $featuredHeaderBackgroundColor;
+}
+
+.template-strapline {
+  color: $featuredHeaderTextColor;
+}
+
+.featured-authentication-wrapper {
+  background-color: $featuredWrapperColor;
+}
+
+.site-link {
+  color: $featuredTextColor;
+}
+
+.site-form-label {
+  color: $featuredTextColor;
+}
+
+.normal-authentication-option,
+#questionnaire {
+  .site-btn-success {
+    background-color: $featuredButtonColor;
+    border-bottom: 4px solid scale-color($featuredButtonColor, $lightness: -20%);
+    color: $featuredFormButtonTextColor;
+  }
+
+  .site-btn-success:hover {
+    background-color: scale-color($featuredButtonColor, $lightness: 5%);
+  }
+
+  .site-btn-success:active {
+    background-color: scale-color($featuredButtonColor, $lightness: 3%);
+  }
+}
+
+.featured-background {
+  background-color: $featuredBaseColor;
+  background-position: center top;
+  background-size: cover;
+}
+
+// Landing Page
+.featured-prize-title-container {
+  background-color: $featuredTitleBackgroundColor;
+}
+
+.featured-prize-title {
+  line-height: 1.4;
+  color: $featuredHeaderText;
+  font-size: 1.4em;
+  font-family: 'Arsenal', Arial,Helvetica Neue,Helvetica,sans-serif;;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+}
+
+.featured-prize-background {
+  position: relative;
+  @if (str-index($featuredPrize, $ignoreImageFormat) == 0) {
+    background-image: url("#{$featuredPrize};w=569");
+  } @else {
+    background-image: url("#{$featuredPrize};preservePalette=true");
+  }
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featured-prize-description {
+  color: $featuredTextColor;
+  background-color: $featuredPanelColor;
+}
+
+.featured-prize-description > .reveal-indicator {
+  color: $featuredTextColor;
+}
+
+.terms-conditions-header {
+  color: $featuredTextColor;
+}
+
+.terms-and-conditions-content {
+  color: $featuredTextColor;
+}
+
+.site-authentication-icon {
+  color: $featuredFormTextColor;
+}
+
+.normal-authentication-option {
+  background-color: $featuredFormPanel;
+}
+
+.authentication-header {
+  color: $featuredFormTextColor;
+}
+
+.demographics-panel-header {
+  color: $featuredFormTextColor;
+}
+
+.authentication-closing-date {
+  color: $featuredFormTextColor;
+}
+
+.facebook-summary-label {
+  color: $featuredFormTextColor;
+}
+
+.facebook-summary-value {
+  color: $featuredFormTextColor;
+}
+
+.facebook-edit-details-link {
+  color: $featuredFormTextColor;
+}
+
+.facebook-divider-heading {
+  color: $featuredFormTextColor;
+}
+
+.facebook-divider-line {
+  background-color: scale-color($featuredFormPanel, $lightness: -20%);
+}
+
+.multistage-progress-bar-container {
+  background-color: #eeeeee;
+}
+
+.multistage-progress-bar-step-1,
+.multistage-progress-bar-step-2,
+.multistage-progress-bar-step-3,
+.multistage-progress-bar-step-4,
+.multistage-progress-bar-step-5 {
+  background: repeating-linear-gradient(
+    45deg,
+    $featuredButtonColor,
+    $featuredButtonColor 10px,
+    scale-color($featuredButtonColor, $lightness: 40%) 10px,
+    scale-color($featuredButtonColor, $lightness: 40%) 20px
+  );
+  background-color: #c5c5c5;
+}
+
+.authentication-form .site-form-label {
+  color: $featuredFormTextColor;
+}
+
+.authentication-form .site-link {
+  color: $featuredFormTextColor;
+}
+
+.pre-optin-statement {
+  color: $featuredFormTextColor;
+}
+
+.site-disclaimer,
+.site-disclaimer > .site-link {
+  color: $featuredFormTextColor;
+}
+
+.optin-information-container {
+  color: $featuredFormTextColor;
+}
+
+.small-print {
+  color: $featuredFormTextColor;
+}
+
+.small-print > .site-link {
+  color: $featuredFormTextColor;
+}
+
+.demographics-panel-container > .heading-1 {
+  color: $featuredFormTextColor;
+}
+
+.demographics-panel-container > p {
+  color: $featuredFormTextColor;
+}
+
+.site-form-button-container > .site-link {
+  color: $featuredFormTextColor;
+}
+
+.site-notification-icon.is-active {
+  background-color: $featuredButtonColor;
+}
+
+.authentication-progress-bar-container {
+  border-color: scale-color($featuredFormPanel, $lightness: -10%);
+  background-color: $featuredButtonColor;
+}
+
+.normal-authentication-option select
+{
+    // Fix issue with dropdown arrows spilling past select elements
+    height: 2.5em;
+}
+
+// registration changes
+.info-section {
+  // background-color: rgba(
+  //   pick-visible-color(
+  //     $featuredBaseColor,
+  //     $featuredDarkText,
+  //     $featuredLightText
+  //   ),
+  //   0.1
+  // );
+    padding:0 16px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+}
+.close-2 {
+  box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  display: inline-block; 
+  float: right; 
+  width: 44px; 
+  height: 44px; 
+  background-color: transparent; 
+  box-shadow: inset 0px 0px 0px 2px $featuredButtonColor; 
+  border-radius: 50%; 
+  position: relative;  
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+
+.close-2:after,
+.close-2:before {
+  position: absolute;
+  content:"";
+  background-color: $featuredButtonColor;
+}
+
+.close-2:after {
+  width: 2px;
+  height: 20px;
+  top:12px;
+  left: 20px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close-2:before {
+  width: 20px;
+  height: 2px;
+  top: 21px;
+  left: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);  
+}
+.collapse-div-margin {
+  height: auto;
+  display: block;
+}
+.collapse-div-margin-2 {
+  height: auto;
+  display: block;
+}
+
+.legitimiateInterest-hide{
+  display: none;
+}
+.close-specific-hide{
+  display:none;
+}
+
+
+// Questionnaire Page
+
+.questionnaire-prize-wrapper {
+  background-color: $featuredPanelColor;
+}
+
+.questionnaire-prize-container .prize-information-heading {
+  color: $featuredFormTextColor;
+}
+
+.questionnaire-prize-container .prize-information-divider {
+  border-color: scale-color($featuredPanelColor, $lightness: 40%);
+}
+
+.questionnaire-prize-container .prize-description-content {
+  color: $featuredTextColor;
+}
+
+.questionnaire-prize-wrapper .reveal-indicator {
+  color: $featuredTextColor;
+}
+
+.questionnaire-heading-container {
+  background-color: $featuredTitleBackgroundColor;
+}
+
+.questionnaire-heading {
+  color: $featuredHeaderText;
+}
+
+.questionnaire-strapline {
+  color: $featuredFormTextColor;
+}
+
+.questionnaire-strapline > .theme-featured {
+  color: $featuredFormTextColor;
+}
+
+.questionnaire-progress-bar-container {
+  background-color: scale-color(
+    $featuredPanelColor,
+    $lightness: 40%,
+    $saturation: -35%
+  );
+}
+
+.questionnaire-progress-bar {
+  background: repeating-linear-gradient(
+    45deg,
+    $featuredButtonColor,
+    $featuredButtonColor 10px,
+    scale-color($featuredButtonColor, $lightness: 40%) 10px,
+    scale-color($featuredButtonColor, $lightness: 40%) 20px
+  );
+  background-color: $featuredFormTextColor;
+}
+
+.questionnaire-prize-divider-arrow {
+  color: $featuredPanelColor;
+}
+
+.question-group.theme-featured {
+  border-bottom: solid 1px $featuredBaseColor;
+}
+
+.questionnaire-separator.theme-featured {
+  background-color: $featuredButtonColor;
+}
+
+.site-panel-divider.theme-featured {
+  background-color: $featuredButtonColor;
+}
+
+.questionnaire-phone-number-button {
+  border-color: $featuredButtonColor;
+  color: #414b56;
+}
+
+.questionnaire-phone-number-button:hover {
+  background-color: scale-color($featuredButtonColor, $lightness: 70%);
+}
+
+// Thank you Page
+.completed-wrapper {
+  background-color: $featuredPanelColor;
+}
+
+.current-prize-ribbon.theme-featured {
+  color: $featuredTextColor;
+}
+
+.current-prize-heading-container > .heading-2 {
+  color: $featuredTextColor;
+}
+
+.current-prize-heading-container .prize-property-tag-icon,
+.current-prize-heading-container .prize-property-tag-label {
+  color: $featuredTextColor;
+}
+
+.current-prize-heading-container > .prize-confirmation-message {
+  color: $featuredTextColor;
+}
+
+.current-prize-heading-container
+  > .prize-confirmation-message
+  > .site-link-alternative {
+  color: $featuredTextColor;
+}
+
+.completed-divider-arrow {
+  color: $featuredPanelColor;
+}
+
+.alternative-prizes-container {
+  background-color: #ffffff;
+}
+
+@include grid-media-query("small-outwards") {
+  @if (lightness($featuredHeaderBackgroundColor) > 20) {
+    .template-logo {
+      margin-bottom: 10px;
+    }
+  }
+
+  .featured-prize-title {
+    font-size: 2.4em;
+  }
+
+  .featured-prize-background {
+    @if (str-index($featuredPrize, $ignoreImageFormat) == 0) {
+      background-image: url("#{$featuredPrize};w=768");
+    } @else {
+      background-image: url("#{$featuredPrize};preservePalette=true");
+    }
+  }
+}
+
+@include grid-media-query("medium-outwards") {
+  .featured-prize-title {
+    font-size: 3.2em; 
+  }
+
+  //Questionnaire
+
+  .questionnaire-heading > .heading-3 {
+    color: $featuredFormTextColor;
+  }
+
+  .questionnaire-strapline {
+    color: $featuredFormTextColor;
+  }
+}
+
+@include grid-media-query("large-outwards") {
+  @if variable-exists(featuredSiteBackground) and $featuredSiteBackground != ""
+  {
+    .featured-background.has-loaded {
+      background-image: url("#{$featuredSiteBackground};w=2560");
+    }
+  }
+
+  .terms-conditions-container {
+    background-color: transparent;
+  }
+}
+.li-style-join{
+	font-size: 0.8em;
+}
+
+.ul-style{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	  padding-inline-start: 40px;
+	
+	.li-style-join {
+		list-style: unset;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.lp-disclaimer {
+  margin-bottom: auto;
+  margin-top:8px;
+}
+.lp-info-box {
+  border: solid 1px $featuredTextColor;
+  background:transparent !important;
+}
+
